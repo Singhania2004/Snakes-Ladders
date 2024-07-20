@@ -128,7 +128,7 @@ function chechWinner(position){
         }
         setTimeout(() => {
             $("#turnUpdate").text("PLAYER " + playerSelected[playerSelected.length-1].num + " WINS !!!! \n P" + playerSelected[0].num + " rolls");
-            $("#turnColor").css("background-color", playerSelected[1].bg)
+            $("#turnColor").css("background-color", playerSelected[0].bg)
             $("#extraTurn").css("display", "none");
             var win = playerSelected.pop();
             return false;
