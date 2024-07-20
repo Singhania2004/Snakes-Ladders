@@ -1,0 +1,256 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.title{
+    text-align: center;
+    width: 100vw;
+    margin: auto;
+    font-family: "Honk", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 68px;
+    padding: 25px 0px;
+}
+
+.main-container{
+    font-family: "Poppins", sans-serif;
+    margin: 0px 30px 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6vw;
+    flex-wrap: wrap;
+}
+
+.box{
+    height: 550px;
+}
+
+.board{
+    width: 550px;
+}
+
+.display{
+    width: 420px;
+    background-color: #7ff1ffc7;
+}
+
+.grid{
+    height: 550px;
+    width: 550px;
+    background-image: url(./images/board.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.unit {
+    height: 55px;
+    width: 55px;
+    /* border: 2px solid black; */
+  }
+
+.navbar{
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    padding-left: 6px;
+    font-weight: 550;
+    background-color: black;
+    height: 58px;
+    width: 100%;
+    border-radius: 8px;
+    color: #e8e8e8;
+}
+
+.navbar div{
+    height: 46px;
+    width: 150px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.whiteBlock{
+    background-color: white;
+    color: black;
+}
+
+.display .play{
+    height: 492px;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.img-dice {
+  width: 65%;
+  cursor: pointer;
+}
+
+.game h2{
+    margin: 15px 0 10px 0;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.unit{
+    text-align: center;
+}
+
+.unit span{
+    display: none;
+}
+
+.pieces{
+    height: 50px;
+    width: 16px;
+    padding-bottom: 7px;
+}
+
+.display .game{
+    display: none;
+}
+
+.display .rules{
+    display: none;
+}
+
+.display .selection{
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 450;
+}
+
+.selection input, .selection select, .selection option{
+    display:inline-block;
+    padding: 5px 10px;
+    line-height: 140%;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+#numberInput{
+    padding: 2.5px 10px;
+    margin-bottom: 20px;
+}
+
+#submit{
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+#rules ul{
+    margin-top: 20px;
+    text-align: left;
+    font-size: 22px;
+}
+
+#rules h3{
+    font-size: 25px;
+}
+
+.dice-disable{
+    filter: contrast(0.75);
+    transform: scale(0.9);
+}
+
+#turnColor{
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    background-color: #e70c62;
+    display: inline-block;
+    margin-bottom: 8px;
+    border: 2.5px solid black;
+}
+
+#extraTurn{
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .grid{
+        height: 300px;
+        width: 300px;
+    }
+    .unit {
+        height: 30px;
+        width: 30px;
+    }
+    .title{
+        font-size: 35px;
+        padding: 20px 0px;
+    }
+    .box{
+        height: 300px;
+    }
+    .board{
+        width: 300px;
+    }
+    .display{
+        width: 300px;
+    }
+    .navbar{
+        font-size: 19px;
+        padding-left: 4px;
+        height: 35px;
+    }
+    .navbar div{
+        height: 26px;
+        width: 100px;
+    }
+    .display .play{
+        height: 265px;
+        width: 75%;
+    }
+    .img-dice {
+        width: 40%;
+        margin-bottom: 7px;
+    }  
+    .game h2{
+        margin: 1px 0;
+        font-size: 25px;
+    } 
+    .pieces{
+        height: 25px;
+        width: 10px;
+        padding-bottom: 4px;
+    }
+    #turnColor{
+        height: 32px;
+        width: 32px;
+        margin-top: 7px;
+    }
+    .display .selection{
+        font-size: 23px;
+    }
+    .selection input, .selection select, .selection option{
+        line-height: 120%;
+        font-size: 17px;
+    }
+    #rules ul{
+        font-size: 18px;
+    }
+    #rules h3{
+        font-size: 20px;
+    }
+}
